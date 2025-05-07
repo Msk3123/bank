@@ -30,7 +30,7 @@ body {
 .auth-container button {
     width: 100%;
     padding: 12px;
-    background-color: #007bff;
+    background-color: blue;
     color: #ffffff;
     border: none;
     border-radius: 6px;
@@ -38,7 +38,7 @@ body {
 }
 
 .auth-container button:hover {
-    background-color: #0071ea;
+    background-color:blue;
 }
 
 .auth-container .message {
@@ -53,7 +53,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: blue;
     color: white;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
@@ -75,7 +75,7 @@ body {
 
 .navigation button:hover {
     background-color: white;
-    color: #007bff;
+    color: blue;
 }
 
 .logo-block {
@@ -102,7 +102,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
-    background-color: #007bff;
+    background-color:blue;
     color: white;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
@@ -137,5 +137,5 @@ body {
 
 .navigation button:hover {
     background-color: white;
-    color: #007bff;
+    color: blue;
 }

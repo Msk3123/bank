@@ -1,3 +1,56 @@
-.navigationButton {
+/* Header.css */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  
+  /* Додаємо обмеження ширини та центрування */
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
+}
 
+.logo-block {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  min-width: 200px; /* Мінімальна ширина для лого */
+}
+
+.navigation {
+  display: flex;
+  gap: 1rem;
+  flex-shrink: 0; /* Забороняємо зменшення */
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background: #f0f0f0;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background: #e0e0e0;
+}
+
+/* Для мобільних пристроїв */
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem;
+  }
+  
+  .logo-text {
+    display: none; /* Ховаємо текст на малих екранах */
+  }
 }
