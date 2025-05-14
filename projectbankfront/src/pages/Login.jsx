@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import LoginRegisterBackground from "./LoginRegisterBackground";
+import '../styles/Login.css'
 
 export default function Login() {
     const [login, setLogin] = useState("");
@@ -27,7 +28,10 @@ export default function Login() {
     };
 
     return (
+        <LoginRegisterBackground>
+         
         <div className="auth-container">
+            
             <h1>Вхід</h1>
             <form onSubmit={handleSubmit}>
                 <input
@@ -47,6 +51,8 @@ export default function Login() {
                 <button type="submit">Увійти</button>
                 {message && <div className="message">{message}</div>}
             </form>
+            
         </div>
+        </LoginRegisterBackground>
     );
 }

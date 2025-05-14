@@ -1,4 +1,8 @@
 import { useState } from "react";
+import leftImage from '../assets/leftImage.png';
+import rightImage from '../assets/rightImage.png';
+import '../styles/Register.css';
+import LoginRegisterBackground from "./LoginRegisterBackground";
 
 export default function Register() {
     const [login, setLogin] = useState("");
@@ -26,6 +30,10 @@ export default function Register() {
     };
 
     return (
+        <LoginRegisterBackground>
+        
+       
+        
         <div className="auth-container">
             <h1>Реєстрація</h1>
             <form onSubmit={handleSubmit}>
@@ -68,5 +76,9 @@ export default function Register() {
                 {message && <div className="message">{message}</div>}
             </form>
         </div>
+    
+        
+    
+    </LoginRegisterBackground>
     );
 }
