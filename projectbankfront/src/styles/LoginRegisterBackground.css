@@ -1,0 +1,17 @@
+.login-register-background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: 
+        url('../assets/leftImage.png') left center no-repeat,
+        url('../assets/rightImage.png') right center no-repeat,
+        url('../assets/backgroundImage.png') center center no-repeat;
+    background-size: 
+        auto 500px,      /* Розмір лівої дівчини */
+        auto 500px,      /* Розмір правої дівчини */
+        cover;           /* Фон грошей */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
