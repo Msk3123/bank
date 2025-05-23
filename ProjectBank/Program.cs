@@ -7,13 +7,16 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Вказуємо адресу та порт
+builder.WebHost.UseUrls("http://localhost:5286");
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", policy =>
     {
         policy.AllowAnyOrigin()
-            .AllowAnyHeader()
-            .AllowAnyMethod();
+              .AllowAnyHeader()
+              .AllowAnyMethod();
     });
 });
 
@@ -42,7 +45,7 @@ var app = builder.Build();
 app.UseHttpsRedirection();
 
 app.UseCors("AllowAll");
-app.UseAuthentication(); // Дода
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

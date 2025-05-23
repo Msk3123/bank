@@ -1,6 +1,4 @@
 import { useState } from "react";
-import leftImage from '../assets/leftImage.png';
-import rightImage from '../assets/rightImage.png';
 import '../styles/Register.css';
 import LoginRegisterBackground from "./LoginRegisterBackground";
 

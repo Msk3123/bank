@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import '../styles/Profil.css'; 
+import "../styles/Profil.css";
+import CardDesign from "./CardDesign";
 
 export default function Profil() {
     const [userData, setUserData] = useState(null);
@@ -31,17 +32,89 @@ export default function Profil() {
 
     return (
         <div className="profile-container">
-            <h1><b>Профіль</b></h1>
+            <div className="profile-header">
+                <h1 className="profile-title">🦆 Мій Профіль</h1>
+                <div className="decorative-line"></div>
+            </div>
 
-            {message && <div className="message">{message}</div>}
+            {message && <div className="message-bubble">{message}</div>}
 
             {userData && (
-                <div className="user-data">
-                    <p>Ім'я: {userData.name}</p>
-                    <p>Фамілія: {userData.surname}</p>
-                    <p>Логін: {userData.login}</p>
-                    <p>Email: {userData.email}</p>
-                    <p>Баланс: 0</p>
+                <div className="profile-content">
+                    {/* Лівий блок - Інформація */}
+                    <div className="user-info-card">
+                        <div className="user-avatar">
+                            {userData.name[0]}
+                            {userData.surname[0]}
+                        </div>
+
+                        <div className="info-grid">
+                            <div className="info-item">
+                                <span className="info-icon">👤</span>
+                                <div>
+                                    <p className="info-label">Ім'я</p>
+                                    <p className="info-value">{userData.name}</p>
+                                </div>
+                            </div>
+
+                            <div className="info-item">
+                                <span className="info-icon">📜</span>
+                                <div>
+                                    <p className="info-label">Фамілія</p>
+                                    <p className="info-value">{userData.surname}</p>
+                                </div>
+                            </div>
+
+                            <div className="info-item">
+                                <span className="info-icon">🔐</span>
+                                <div>
+                                    <p className="info-label">Логін</p>
+                                    <p className="info-value">{userData.login}</p>
+                                </div>
+                            </div>
+
+                            <div className="info-item">
+                                <span className="info-icon">📧</span>
+                                <div>
+                                    <p className="info-label">Email</p>
+                                    <p className="info-value">{userData.email}</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="balance-card">
+                            <div className="balance-content">
+                                <span className="wallet-icon">💰</span>
+                                <div>
+                                    <p className="balance-label">Поточний баланс</p>
+                                    <p className="balance-amount">0 ₴</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                                      {/* Правий блок - Картка */}
+                    <div className="card-section">
+  <h2>💳 Моя Картка</h2>
+
+  {/* Картка переміщена над кнопками */}
+  <div className="card-container">
+    <CardDesign
+      cardNumber="4111 1111 1111 1111"
+      expiryDate="12/26"
+      cvv="123"
+    />
+  </div>
+
+  {/* Кнопки під карткою */}
+  <button className="action-button">
+    🏦 Поповнити рахунок
+  </button>
+
+  <button className="action-button">
+    📤 Надіслати кошти
+  </button>
+</div>
                 </div>
             )}
         </div>

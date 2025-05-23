@@ -10,7 +10,13 @@ import AboutBank from "./pages/AboutBank";
 import BankBackground from "./pages/BankBackground";
 import Footer from "./pages/Footer";
 
+
+
+
 export default function App() {
+
+
+
   return (
     <>
       <Header />

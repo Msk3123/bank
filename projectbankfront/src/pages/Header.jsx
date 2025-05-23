@@ -19,25 +19,32 @@ export default function Header() {
     }
   }, []);
 
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    setUserLogin(null);
+    navigate("/");
+  };
+
   return (
     <header className="header">
-      <div className="logo-block" onClick={() => navigate("/")}>
+      <div className="logo-block" onClick={() => navigate("/")}> 
         <img src={logo} alt="Bank Logo" className="logo-img" />
         <span className="logo-text">ScroogeMCduckBANK</span>
       </div>
       <nav className="navigation">
         {userLogin ? (
-          <button className="button" onClick={() => navigate("/profile")}>
-            {userLogin}
-          </button>
+          <>
+            <button className="button" onClick={() => navigate("/profil")}>
+              {userLogin}
+            </button>
+            <button className="button" onClick={handleLogout}>
+              Вийти
+            </button>
+          </>
         ) : (
           <>
-            <button className="button" onClick={() => navigate("/login")}>
-              Вхід
-            </button>
-            <button className="button" onClick={() => navigate("/register")}>
-              Реєстрація
-            </button>
+            <button className="button" onClick={() => navigate("/login")}>Вхід</button>
+            <button className="button" onClick={() => navigate("/register")}>Реєстрація</button>
           </>
         )}
       </nav>

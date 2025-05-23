@@ -1,21 +1,212 @@
-.profile-container{
-    max-width: 1000px;
-    margin: 100px auto;
-    padding: 30px;
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
-    
+.profile-container {
+    padding: 2rem;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    min-height: 100vh;
 }
 
-.profile-container h1 {
+.profile-header {
     text-align: center;
-    font-size: 30px;
-    color:blue;
+    margin-bottom: 2rem;
 }
 
-.profile-container p {
-    text-align: justify;
-    color: #222;
-    font-size: 20px;
+.profile-title {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.decorative-line {
+    width: 100px;
+    height: 4px;
+    background: #3498db;
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+.profile-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.user-info-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.user-avatar {
+    width: 80px;
+    height: 80px;
+    background: #3498db;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+.info-item:hover {
+    transform: translateY(-3px);
+}
+
+.info-icon {
+    font-size: 1.5rem;
+}
+
+.info-label {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
+.info-value {
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.balance-card {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    padding: 1.5rem;
+    border-radius: 15px;
+    color: white;
+}
+
+.balance-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.wallet-icon {
+    font-size: 2rem;
+}
+
+.balance-label {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.balance-amount {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.card-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.card-header {
+    text-align: center;
+}
+
+.card-header h2 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+}
+
+.card-animation {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    margin-bottom: 2rem;
+}
+
+.action-button {
+    width: 100%;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border: none;
+    border-radius: 10px;
+    background: #3498db;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.action-button:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52,152,219,0.3);
+}
+
+.message-bubble {
+    padding: 1rem 2rem;
+    background: #fff3cd;
+    border-radius: 50px;
+    display: inline-block;
+    margin: 1rem auto;
+    border: 2px solid #ffeeba;
+}
+/* Оновлені стилі для картки */
+.card-section {
+    position: relative;
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-animation {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    margin: -40px 0 20px 0; /* Піднімає картку вище */
+}
+
+.card-actions {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    padding: 0 2rem;
+}
+.card-container {
+   display: flex;
+  justify-content: center;
+  margin-top: 1rem; /* щоб було чітко під кнопкою */
+  height: 225px;     /* фіксована висота, щоби нічого не стрибало */
+  position: relative;
+}
+
+.card-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }

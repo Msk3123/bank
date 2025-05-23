@@ -12,7 +12,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-column">
-          <h4><FaClock /> Час роботи</h4>
+          <h4><FaClock /> Час роботи підтримки</h4>
           <p>Пн-Пт: 09:00 - 18:00</p>
           <p>Сб: 10:00 - 15:00</p>
         </div>
